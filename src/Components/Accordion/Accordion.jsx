@@ -1,3 +1,4 @@
+import { useState } from "react";
 import AccordionItem from "../AccordionItem/AccordionItem";
 import "./Accordion.css";
 
@@ -40,12 +41,19 @@ const faqs = [
 ];
 
 export default function Accordion() {
+  const [curOpen, setCurOpen] = useState(null);
+
   return (
     <>
       <div className="accordion">
         <h1>Frequently Asked Questions!</h1>
         {faqs.map((faq) => (
-          <AccordionItem key={faq.id} faq={faq} />
+          <AccordionItem
+            key={faq.id}
+            faq={faq}
+            curOpen={curOpen}
+            onOpen={setCurOpen}
+          />
         ))}
       </div>
     </>
