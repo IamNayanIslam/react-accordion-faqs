@@ -53,7 +53,9 @@ export default function Accordion() {
             faq={faq}
             curOpen={curOpen}
             onOpen={setCurOpen}
-          />
+          >
+            {faq.description}
+          </AccordionItem>
         ))}
       </div>
     </>
