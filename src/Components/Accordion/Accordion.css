@@ -6,6 +6,7 @@
 
 body {
   font-family: sans-serif;
+  background: #a8a8a8;
   color: #343a40;
   line-height: 1;
 }
@@ -15,14 +16,14 @@ body {
   margin: 100px auto;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 0px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
 
 @media screen and (max-width: 500px) {
   .accordion {
     width: 96%;
     margin: 20px auto;
-    gap: 10px;
   }
 
   .accordion h1 {
@@ -36,20 +37,22 @@ body {
 .accordion h1 {
   text-align: center;
   font-size: 22px;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .item {
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   padding: 20px 24px;
   padding-right: 48px;
   cursor: pointer;
-  border-top: 4px solid #fff;
-  border-bottom: 4px solid #fff;
+  /* border-top: 1px solid #a8a8a8; */
+  border-bottom: 1px solid #a8a8a8;
   display: grid;
   grid-template-columns: auto 1fr auto;
   column-gap: 24px;
   row-gap: 32px;
   align-items: center;
+  background: #fff;
 }
 
 .number {
@@ -77,6 +80,10 @@ body {
 /* OPEN STATE */
 .open {
   border-top: 4px solid #087f5b;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  border-bottom: none;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
 
 .open .number,
