@@ -18,6 +18,21 @@ body {
   gap: 24px;
 }
 
+@media screen and (max-width: 500px) {
+  .accordion {
+    width: 96%;
+    margin: 20px auto;
+    gap: 10px;
+  }
+
+  .accordion h1 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+}
+
 .accordion h1 {
   text-align: center;
   font-size: 22px;
@@ -40,7 +55,7 @@ body {
 .number {
   font-size: 20px;
   font-weight: 500;
-  color: #ced4da;
+  color: #868e96;
 }
 
 .title,
@@ -49,20 +64,14 @@ body {
   font-weight: 500;
 }
 
+.icon {
+  color: #868e96;
+}
+
 .content-box {
   grid-column: 2 / -1;
   padding-bottom: 16px;
   line-height: 1.6;
-}
-
-.content-box ul {
-  color: #868e96;
-  margin-left: 16px;
-  margin-top: 16px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
 }
 
 /* OPEN STATE */
@@ -71,6 +80,7 @@ body {
 }
 
 .open .number,
-.open .text {
+.open .text,
+.open .icon {
   color: #087f5b;
 }
